@@ -71,7 +71,7 @@ function calendar()
     $date = $date.'-04';
 
     for($day = 1; $day <= $daysNumber; $day++) {
-        
+        $day = date('D d', $day . '-' . implode('-', $script));
         echo str_pad($day, strlen($titre), ' ', STR_PAD_BOTH) . PHP_EOL;
     }
     global $jour;
